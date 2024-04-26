@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ClienteController;
 use App\Http\Controllers\VehiculoController;
+use App\Http\Controllers\VentaController;
 
 /*
 |--------------------------------------------------------------------------
@@ -36,3 +37,12 @@ Route::get('/vehiculo/create', [VehiculoController::class, 'create'])->name('veh
 Route::delete('/vehiculo/{vehiculo}', [VehiculoController::class, 'destroy'])->name('vehiculo.destroy');
 Route::put('/vehiculo/{vehiculo}', [VehiculoController::class, 'update'])->name('vehiculo.update');
 Route::get('/vehiculo/{vehiculo}/edit', [VehiculoController::class, 'edit'])->name('vehiculo.edit');
+
+//RUTAS VENTAS
+
+Route::get('/venta', [VentaController::class, 'index'])->name('venta.index');
+Route::post('/venta', [VentaController::class, 'store'])->name('venta.store');
+Route::get('/venta/create', [VentaController::class, 'create'])->name('venta.create');
+Route::delete('/venta/{venta}', [VentaController::class, 'destroy'])->name('venta.destroy');
+Route::put('/venta/{venta}', [VentaController::class, 'update'])->name('venta.update');
+Route::get('/venta/{venta}/edit', [VentaController::class, 'edit'])->name('venta.edit');
