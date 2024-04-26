@@ -70,20 +70,12 @@ class ClienteController extends Controller
     {
         //
     }
-
     /**
      * Show the form for editing the specified resource.
      *
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    // public function edit($id)
-    // {
-    //     $clientes = Cliente::find($id)
-    //     ->orderBy('id')
-    //     ->get();
-    //     return view('cliente.edit', ['cliente' => $clientes]);
-    // }
 
     public function edit($id)
 {
