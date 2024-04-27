@@ -68,8 +68,9 @@
                         <td>{{ $vehiculo->marca }}</td>
                         <td>{{ $vehiculo->modelo }}</td>
                         <td>{{ $vehiculo->año }}</td>
-                        <td>{{ $vehiculo->precio }}</td>
-                        <td>{{ $vehiculo->kilometraje }}</td>
+                        <td>$ {{ number_format($vehiculo->precio, 0, ',', '.') }}</td>
+                        <td>{{ number_format($vehiculo->kilometraje, 0, ',', '.') }} Km</td>
+
                         <td>{{ $vehiculo->tipo }}</td>
                         <td>
                             <a href="{{ route('vehiculo.edit', ['vehiculo' => $vehiculo->id]) }}" class="btn btn-info btn-sm">Editar</a>

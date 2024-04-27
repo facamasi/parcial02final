@@ -80,7 +80,9 @@
                         <td>{{ $venta->vehiculo_id }}</td>
                         <td>{{ $venta->cliente_id }}</td>
                         <td>{{ $venta->fecha_venta }}</td>
-                        <td>{{ $venta->precio_final }}</td>
+                        <td>$ {{ number_format($venta->precio_final, 0, ',', '.' )}}</td>
+
+
                         <td>
                             <a href="{{ route('venta.edit', ['venta' => $venta->id]) }}" class="btn btn-info btn-sm">Editar</a>
                             <form action="{{ route('venta.destroy', ['venta' => $venta->id]) }}" method="POST" style="display: inline-block;">
